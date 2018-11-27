@@ -1,6 +1,6 @@
 public class JackOLantern
 {
-    String [][] faceFeatures;
+    private String [][] faceFeatures;
     public  JackOLantern (String [][] faceFeatures)
     {
         this.faceFeatures = faceFeatures;
@@ -9,7 +9,7 @@ public class JackOLantern
     {
         for(int i = 0; i < faceFeatures.length; i++)
         {
-            for (int n = 0; i < faceFeatures[i].length; n++ )
+            for (int n = 0; n < faceFeatures[i].length; n++ )
             {
                 faceFeatures [i][n] = str;
             }
@@ -20,10 +20,11 @@ public class JackOLantern
         String output = "";
         for (int i = 0; i < faceFeatures.length; i++)
         {
-            for (int n = 0; n <faceFeatures [i].length; n++)
+            for (int n = 0; n <faceFeatures[i].length; n++)
             {
-                output = faceFeatures[i] [n] + "\n";
+                output = output + faceFeatures[i][n];
             }
+            output = output + "\n";
         }
         return output;
     }
